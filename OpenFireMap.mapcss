@@ -1,0 +1,51 @@
+node|z11[amenity=fire_station],
+area|z11[amenity=fire_station] {
+  icon-image: url('img/Ofm_fire_station_11.png');
+}
+node|z12-[amenity=fire_station],
+area|z12-[amenity=fire_station] {
+  icon-image: url('img/Ofm_fire_station.png');
+}
+node|z13-[amenity=fire_station],
+area|z13-[amenity=fire_station] {
+  text: ref;
+  text-color: red;
+  font-size: 8;
+}
+
+node|z14-[emergency=fire_hydrant],
+node|z14-[emergency=water_tank],
+node|z14-[emergency=suction_point],
+node|z14-[emergency=fire_water_pond] {
+  icon-image: url('img/Ofm_hydrant_15.png');
+}
+node|z16-[emergency=fire_hydrant] {
+  icon-image: url('img/Ofm_hydrant_u_17.png');
+}
+node|z16-[emergency=fire_hydrant][fire_hydrant:type=pillar] {
+  icon-image: url('img/Ofm_hydrant_p_17.png');
+}
+node|z16-[emergency=fire_hydrant][fire_hydrant:type=underground] {
+  icon-image: url('img/Ofm_hydrant_u_17.png');
+}
+node|z16-[emergency=fire_hydrant][fire_hydrant:type=wall] {
+  icon-image: url('img/Ofm_hydrant_w_17.png');
+}
+node|z16-[emergency=water_tank] {
+  icon-image: url('img/Ofm_water_tank_17.png');
+}
+node|z16-[emergency=fire_hydrant][fire_hydrant:type=pond],
+node|z16-[emergency=suction_point],
+node|z16-[emergency=fire_water_pond] {
+  icon-image: url('img/Ofm_openwater_17.png');
+}
+node|z17-[emergency=fire_hydrant][fire_hydrant:diameter] {
+  text: tag('fire_hydrant:diameter');
+  text-color: red;
+  font-size: 8;
+}
+node|z17-[emergency=water_tank][water_tank:volume] {
+  text: tag('emergency=water_tank');
+  text-color: red;
+  font-size: 8;
+}
