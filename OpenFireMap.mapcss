@@ -1,10 +1,12 @@
 node|z11[amenity=fire_station],
 area|z11[amenity=fire_station] {
   icon-image: url('img/Ofm_fire_station_11.png');
+  popup-title: tag('name');
 }
 node|z12-[amenity=fire_station],
 area|z12-[amenity=fire_station] {
   icon-image: url('img/Ofm_fire_station.png');
+  popup-title: tag('name');
 }
 node|z13-[amenity=fire_station],
 area|z13-[amenity=fire_station] {
@@ -18,6 +20,11 @@ node|z14-[emergency=water_tank],
 node|z14-[emergency=suction_point],
 node|z14-[emergency=fire_water_pond] {
   icon-image: url('img/Ofm_hydrant_15.png');
+  popup-body: concat(
+    'Type: ', (tag('fire_hydrant:type') ? tag('fire_hydrant:type') : 'unknown'),
+    (tag('fire_hydrant:diameter') ? concat('<br>Diameter: ', tag('fire_hydrant:diameter')) : ""), 
+    (tag('fire_hydrant:pressure') ? concat('<br>Pressure: ', tag('fire_hydrant:pressure')) : "")
+    );
 }
 node|z16-[emergency=fire_hydrant] {
   icon-image: url('img/Ofm_hydrant_u_17.png');
